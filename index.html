@@ -1,0 +1,188 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Jurídico</title>
+    <script type="importmap">
+    {
+        "imports": {
+            "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        }
+    }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top px-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span title="Inicio"><i class="bi bi-briefcase-fill"></i> Gestor Jurídico</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" data-section="dashboard" title="Panel principal"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="clients" title="Clientes"><i class="bi bi-people-fill"></i> <span class="d-none d-md-inline">Clientes</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="cases" title="Casos"><i class="bi bi-journal-bookmark-fill"></i> <span class="d-none d-md-inline">Casos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="documents" title="Documentos"><i class="bi bi-file-earmark-text-fill"></i> <span class="d-none d-md-inline">Documentos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="calendar" title="Agenda / Calendario"><i class="bi bi-calendar-event-fill"></i> <span class="d-none d-md-inline">Agenda</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <section id="dashboard" class="content-section">
+            <h1><i class="bi bi-speedometer2"></i> Dashboard General</h1>
+            <p class="lead mb-4" style="font-size:1.28em;color:#2967f1;font-weight:500;">
+                <i class="bi bi-lightbulb-fill" style="color:#ffe465;font-size:1.2em"></i>
+                Bienvenido a <b>Gestor Jurídico</b>. Simplifica y potencia tu despacho con estilo.
+            </p>
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-6">
+                    <div class="card text-blue bg-white mb-3">
+                        <div class="card-header shadow-sm d-flex align-items-center">
+                            <i class="bi bi-people-fill"></i> <span>Clientes Activos</span>
+                        </div>
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <h5 class="card-title" id="dashboardClientsCount">
+                                <i class="bi bi-person-circle" style="margin-right:4px; color:#347eff"></i>
+                                0
+                            </h5>
+                            <p class="card-text text-secondary mt-2">
+                                <i class="bi bi-person-fill-add" style="color:#36d686"></i> Total de clientes registrados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                     <div class="card text-green bg-white mb-3">
+                        <div class="card-header shadow-sm d-flex align-items-center">
+                            <i class="bi bi-journal-bookmark-fill"></i> <span>Casos Abiertos</span>
+                        </div>
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <h5 class="card-title" id="dashboardOpenCasesCount">
+                                <i class="bi bi-folder2-open" style="color:#45cc93;margin-right:5px"></i>
+                                0
+                            </h5>
+                            <p class="card-text text-secondary mt-2"><i class="bi bi-hourglass-split" style="color:#ffc163"></i> Casos actualmente "Abierto" o "En Proceso".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-quick-links mt-5">
+                <div class="d-flex flex-column flex-md-row justify-content-center gap-4">
+                    <a href="#" class="dashboard-link-card card shadow-sm" data-section="clients" title="Ir a Clientes">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <span class="dashboard-link-icon bg-gradient-primary">
+                              <i class="bi bi-people-fill"></i>
+                            </span>
+                            <div>
+                              <div class="dashboard-link-title">Clientes</div>
+                              <div class="dashboard-link-desc text-secondary">Gestiona tus clientes</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="dashboard-link-card card shadow-sm" data-section="cases" title="Ir a Casos">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <span class="dashboard-link-icon bg-gradient-success">
+                              <i class="bi bi-journal-bookmark-fill"></i>
+                            </span>
+                            <div>
+                              <div class="dashboard-link-title">Casos</div>
+                              <div class="dashboard-link-desc text-secondary">Administra y consulta tus casos</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="dashboard-link-card card shadow-sm" data-section="documents" title="Ir a Documentos">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <span class="dashboard-link-icon bg-gradient-yellow">
+                              <i class="bi bi-file-earmark-text-fill"></i>
+                            </span>
+                            <div>
+                              <div class="dashboard-link-title">Documentos</div>
+                              <div class="dashboard-link-desc text-secondary">Organiza los archivos importantes</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="dashboard-link-card card shadow-sm" data-section="calendar" title="Ir a Agenda">
+                        <div class="card-body d-flex align-items-center gap-3">
+                            <span class="dashboard-link-icon bg-gradient-blue">
+                              <i class="bi bi-calendar-event-fill"></i>
+                            </span>
+                            <div>
+                              <div class="dashboard-link-title">Agenda</div>
+                              <div class="dashboard-link-desc text-secondary">Visualiza tus eventos y citas</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <span class="text-muted" style="font-size:1.1em">
+                    <i class="bi bi-chevron-compact-right"></i>
+                    Utilice la navegación superior o los accesos rápidos para gestionar clientes, casos, documentos y su agenda.
+                </span>
+            </div>
+        </section>
+
+        <section id="clients" class="content-section" style="display: none;">
+            <!-- Client management content will be rendered by JS -->
+        </section>
+
+        <section id="cases" class="content-section" style="display: none;">
+            <!-- Case management content will be rendered by JS -->
+        </section>
+
+        <section id="documents" class="content-section" style="display: none;">
+            <h1><i class="bi bi-file-earmark-text-fill"></i> Gestión de Documentos</h1>
+            <div class="alert alert-info d-flex align-items-center gap-2" role="alert">
+                <i class="bi bi-cloud-arrow-up-fill"></i>
+                <div>
+                    Próximamente podrás asociar archivos digitales a tus casos y clientes.
+                </div>
+            </div>
+            <!-- Document management content will go here -->
+        </section>
+
+        <section id="calendar" class="content-section" style="display: none;">
+            <h1><i class="bi bi-calendar-event-fill"></i> Agenda / Calendario</h1>
+            <div class="d-flex align-items-center mb-3 gap-2">
+                <button class="btn btn-outline-primary me-2" id="toggleCalendarViewBtn" title="Ver calendario">
+                    <i class="bi bi-calendar3"></i> Ver Calendario
+                </button>
+                <span id="calendarViewLabel" class="fw-light text-muted"></span>
+            </div>
+            <div id="calendarCrudContainer"></div>
+            <div id="calendarFullView" style="display: none;"></div>
+        </section>
+    </main>
+
+    <footer class="bg-light text-center text-lg-start mt-auto py-3 shadow-sm" style="border-radius:14px 14px 0 0">
+        <div class="text-center p-3" style="background-color: rgba(0, 52, 124, 0.04); font-size:1.11em;">
+            <span class="text-secondary">
+                <i class="bi bi-briefcase-fill" style="color:#4075fc"></i>
+                <strong style="color:#347eff">Gestor Jurídico</strong>
+            </span>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
